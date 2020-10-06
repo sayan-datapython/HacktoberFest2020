@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-  int n, r = 0, t;
+  int n, r = 0,rem=0, t;
 
   printf("Enter a number to check if it's a palindrome or not\n");
   scanf("%d", &n);
@@ -10,8 +10,8 @@ int main()
 
   while (t != 0)
   {
-    r = r * 10;
-    r = r + t%10;
+    rem = t%10;
+    r = r*10+rem;
     t = t/10;
   }
 
